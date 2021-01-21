@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gra słów</title>
+
+   
+
+</head>
+<body>
+    <header>
+       <h1> Sprawdzanie znaków: </h1>
+    </header>
+
+    <!-- here will be select between text or download plik txt -->
+<form method="POST">
+    <div>
+<label for="poleTekstowe">Tu wpisz tekst</label> <br><br>
+<textarea autofocus rows="10" cols="50" id="textArea" placeholder="tutaj wpisz tekst"></textarea>
+    </div>
+    <br><br>
+    
+<select id="ilosc">
+<option value="iloscZnakow" id="iloscZnakow"> ilość znaków </option>
+<option value="iloscCyfr" id="iloscCyfr" > ilość cyfr </option>
+<option value="iloscLiter" id="iloscLiter"> ilość liter </option>
+<option value="iloscWyrazow" id="iloscWyrazow">ilość wyrazów</option>
+</select>
+<br><br>
+
+
+</form>
+<br><br>
+
+<button type="button" onclick="GetSelectedValue()">Potwierdź</button>
+
+<div id="wydruk"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+5. wczytanie pliku txt,
+6. czy wyraz to anagram,
+7. przeszukanie strony,
+8. wczytanie strony, -->
+<script src="./js/script.js"></script>
+</body>
+</html>
