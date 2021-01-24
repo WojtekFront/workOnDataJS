@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href ="./style/style.css">
     <title>gra słów</title>
 
    
@@ -12,7 +13,7 @@
     <header>
        <h1> Sprawdzanie znaków: </h1>
     </header>
-
+<main>
     <!-- here will be select between text or download plik txt -->
 <form method="POST">
     <div>
@@ -20,13 +21,14 @@
 <textarea autofocus rows="10" cols="50" id="textArea" placeholder="tutaj wpisz tekst"></textarea>
     </div>
     <br><br>
-    
+    <div id="newDiv">
 <select id="ilosc">
-<option value="iloscZnakow" id="iloscZnakow"> ilość znaków </option>
-<option value="iloscCyfr" id="iloscCyfr" > ilość cyfr </option>
-<option value="iloscLiter" id="iloscLiter"> ilość liter </option>
-<option value="iloscWyrazow" id="iloscWyrazow">ilość wyrazów</option>
+<option value="iloscZnakow" id="iloscZnakow iloscStyle"> ilość znaków </option>
+<option value="iloscCyfr" id="iloscCyfr iloscStyle" > ilość cyfr </option>
+<option value="iloscLiter" id="iloscLiter iloscStyle"> ilość liter </option>
+<option value="iloscWyrazow" id="iloscWyrazow iloscStyle">ilość wyrazów</option>
 </select>
+</div>
 <br><br>
 
 
@@ -36,27 +38,8 @@
 <button type="button" onclick="GetSelectedValue()">Potwierdź</button>
 
 <div id="wydruk"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-5. wczytanie pliku txt,
-6. czy wyraz to anagram,
-7. przeszukanie strony,
-8. wczytanie strony, -->
+</main>
+<script src="./js/scriptCSS.js"></script>
 <script src="./js/script.js"></script>
 </body>
 </html>
