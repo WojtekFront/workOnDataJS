@@ -1,6 +1,6 @@
 function GetSelectedValue() {
     //creating variable
-    //const textArea, ilosc;
+    
     let ilosc, textArea, returnValue, countValue;
 
     textArea = document.getElementById("textArea").value;
