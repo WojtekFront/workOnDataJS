@@ -1,8 +1,9 @@
-let childrenSelect;
+// let childrenSelect;
+// childrenSelect = document.querySelector('textarea');
+// console.log(childrenSelect.style);
 
 //reaction  inout:empty, focus, not empty
-childrenSelect = document.querySelector('textarea');
-console.log(childrenSelect.style);
+
 
 let changeText = document.getElementById("textArea");
 changeText.onchange = function (e) { 
@@ -19,6 +20,10 @@ changeText.onchange = function (e) {
 
 
 //add tekst above select
+
+
+
+
 let selectOpis = document.createElement("p");
 let node = document.createTextNode("Wybierz:");
 selectOpis.appendChild(node);
