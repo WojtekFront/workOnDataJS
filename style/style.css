@@ -24,3 +24,7 @@ main{
 textarea:empty{
     border: thick solid red;
   }
+  
+#hiddenText{
+    visibility: hidden;
+}
