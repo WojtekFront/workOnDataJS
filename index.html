@@ -27,10 +27,15 @@
 <option value="iloscCyfr" id="iloscCyfr iloscStyle" > ilość cyfr </option>
 <option value="iloscLiter" id="iloscLiter iloscStyle"> ilość liter </option>
 <option value="iloscWyrazow" id="iloscWyrazow iloscStyle">ilość wyrazów</option>
+<option value="iloscAnagram" id="iloscAnagram iloscStyle">czy to anagram</option>
 </select>
 </div>
 <br><br>
-
+ <div id="hiddenText"> 
+<label for="textArea2">Wypelnic dla anagramu:</label>
+<input id="textArea2" type="text" name="textArea2" placeholder ="drugi parametr">
+ </div> 
+<br><br>
 
 </form>
 <br><br>
@@ -38,6 +43,8 @@
 <button type="button" onclick="GetSelectedValue()">Potwierdź</button>
 
 <div id="wydruk"></div>
+
+
 </main>
 <script src="./js/scriptCSS.js"></script>
 <script src="./js/script.js"></script>
