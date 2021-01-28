@@ -12,13 +12,16 @@ function GetSelectedValue() {
         returnValue = "";
         if (ilosc == "iloscZnakow") {
             returnValue = textArea.split("");
-           // console.log("sprawdzam ilosc znakow"+(returnValue.join('')));
+            // console.log("sprawdzam ilosc znakow"+(returnValue.join('')));
+            countValue = returnValue.length;
         }
         else if (ilosc == "iloscCyfr") {
             returnValue = textArea.match(/\d/g); //d is digit
+            countValue = returnValue.length;
         }
         else if (ilosc == "iloscLiter") {
             returnValue = textArea.match(/[a-ząćęłńóśźż]/gi); //i-case-insensitive search  A-ZĄĆĘŁŃÓŚŹŻ
+            countValue = returnValue.length;
         }
         else if (ilosc == "iloscWyrazow") {
             String.prototype.countWords = function () {
@@ -26,27 +29,30 @@ function GetSelectedValue() {
             }
             textArea = textArea.trim();  //without trim plus one word on begining
             returnValue = textArea.countWords();
+            countValue = returnValue.length;
         } else if (ilosc == "iloscAnagram") {
             if (textArea.length != textArea2.length) {
                 countValue = "wyrazy nie sa anagramami";
             } else if (textArea2 != null) {
                 textArea = textArea.split('').sort().join('').toLowerCase();
                 textArea2 = textArea.split('').sort().join('').toLowerCase();
-                if(textArea === textArea2){countValue ="wyrazy sa anagramami"}
-                else{countValue ="wyrazy nie sa anagramami"}
+                if (textArea === textArea2) {
+                    countValue = "wyrazy sa anagramami";
+                }
+                else { countValue = "wyrazy nie sa anagramami"; }
             }
             else {
-                countValue = "wyrazy nie sa anagramami"
+                countValue = "wyrazy nie sa anagramami";
             }
 
         }
         else if (returnValue == "" || returnValue == null) { //catching exceptions
             returnValue = "zbiór jest pusty";
             countValue = 0;
-        } 
-            countValue = returnValue.length;
-        
-       // console.log("drugi komunikat "+(returnValue.join('')));
+        }
+
+
+        // console.log("drugi komunikat "+(returnValue.join('')));
 
 
     } else {
@@ -64,11 +70,11 @@ function GetSelectedValue() {
 
 
 
-let ilosc2 =document.getElementById("ilosc");
-ilosc2.onclick = function (e) { 
-    if (ilosc2.value == "iloscAnagram") { 
+let ilosc2 = document.getElementById("ilosc");
+ilosc2.onclick = function (e) {
+    if (ilosc2.value == "iloscAnagram") {
         document.getElementById("hiddenText").style.visibility = "visible";
-    } else if(ilosc2.value != "iloscAnagram"){
+    } else if (ilosc2.value != "iloscAnagram") {
         document.getElementById("hiddenText").style.visibility = "hidden";
 
     }
