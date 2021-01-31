@@ -1,7 +1,7 @@
 function testObject() {//here will be learning work with object
     let dog = { "name": "Pinokio", "type": "dog" };
-    let cat = { "name": "Candy", "type": "cat" };
-    let pets = [dog, cat, { "name": "Lili", "type": "chicken" }];
+    let cat = { "name": "Candy", "type": "dog" };
+    let pets = [dog, cat, { "name": "Lili", "type": "dog" }];
     pets.push({ "name": "Robert", "type": "rabbit" });
 
 
@@ -47,8 +47,84 @@ function testObject() {//here will be learning work with object
 
 // some method
     let someMethod = listaDoMapy.some(function(current, index){
-        console.log(index, current);
+ //       console.log(index, current);
         return current.indexOf("kapa")>-1;
     });
-    console.log(someMethod);
+  //  console.log(someMethod);
+
+//every method
+let greaterThen7= listDoMapyNr.every(function(current,index){
+    //console.log(current,index);
+    return current<7;
+});
+//console.log(greaterThen7);
+
+
+//few methods
+
+
+let names2 =pets.filter(function(animal){
+    return animal.type.indexOf("dog") >-1
+}).map(function(animal){
+    return animal.name;
+});
+//console.log(names2);
+
+let names3 =pets.filter(animal=>(animal.type.indexOf("dog")>-1)).map(animal=>animal.name);
+//console.log(names3);
+
+
+
+
+
+
+
+//currying
+// function x(a){
+//     console.log('x');
+//     a();
+// }
+// function y(){
+//     console.log('y');
+// }
+// let b= x(y);
+// b(y);
+
+// function greet(msg){
+//     //console.log(msg)
+//     return function (name){
+//         console.log(msg,name);
+//     }
+
+// let engilsh = greet('hi');
+// engilsh('tomi');
+
+//callback function
+let setTim = setTimeout(hello,2000,'2imie');
+clearTimeout(setTim);
+// function doThink(other){
+    
+// let name ="Stefan";
+// other(name);
+// }
+function hello(nm){
+    console.log('hello',nm);
 }
+let setInt = setInterval(hello,200,"nm");
+setInt;
+clearInterval(setInt);
+
+//immediately invoke function expressions
+var somethingElse = (function (nm,nt){
+    return {"name":"nm", "id":nt};
+})("bob",123);
+console.log(somethingElse.name, somethingElse.id);
+
+}
+
+
+
+
+
+ 
+
