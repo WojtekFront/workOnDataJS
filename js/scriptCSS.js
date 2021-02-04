@@ -6,7 +6,7 @@
 
 
 let changeText = document.getElementById("textArea");
-changeText.onchange = function (e) { 
+changeText.addEventListener('input', function (e) { 
     if (changeText.value == "" || changeText.value == null) { 
         e.target.style.border = "thick solid red"; 
     } else if(changeText.value != ""){
@@ -14,7 +14,7 @@ changeText.onchange = function (e) {
 
     }
 
-}; 
+}); 
 
 //reaction select: focus, blur
 
