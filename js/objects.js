@@ -108,7 +108,7 @@ clearTimeout(setTim);
 // other(name);
 // }
 function hello(nm){
-    console.log('hello',nm);
+    //console.log('hello',nm);
 }
 let setInt = setInterval(hello,200,"nm");
 setInt;
@@ -118,9 +118,36 @@ clearInterval(setInt);
 var somethingElse = (function (nm,nt){
     return {"name":"nm", "id":nt};
 })("bob",123);
-console.log(somethingElse.name, somethingElse.id);
+//console.log(somethingElse.name, somethingElse.id);
 
+// let btn = document.getElementById('ilosc');
+
+// btn.addEventListener('click', buttonClicked);
+// function buttonClicked(ev){
+//     console.log(ev.type, ev.target, ev.currentTarget);
+// }
 }
+
+
+document.addEventListener('DOMContentLoaded',init);
+
+function init(){
+let textArea = document.getElementById('textArea');
+textArea.addEventListener('keydown', anyKey);
+
+ }
+
+function anyKey(ev){
+let targe = ev.currentTarget;
+let tag = target.tagName;
+let char = ev.char || ev.charCode || ev.which;
+console.log(char, tag);
+let s = String.fromCharCode(char);
+console.log(s);
+}
+
+
+
 
 
 
